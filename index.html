@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/icon.svg" />
+    <title>Cryptowallet</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="header-menu">
+        <img src="./assets/logo.png" alt="logo image" class="logo" />
+        <img src="./assets/logo-text.png" alt="logo text" class="logo-text" />
+        <ul>
+          <li class="nav-list"><a href="">Exchange</a></li>
+          <li class="nav-list"><a href="">Market</a></li>
+        </ul>
+      </div>
+      <div class="header-action">
+        <button class="btn btn-secondary">Masuk</button>
+        <button class="btn btn-primary" id="btnRegister">Daftar</button>
+      </div>
+    </div>
+    <!-- End Header -->
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>
+          Transaksi Crypto Cepat <br />
+          dan Menguntungkan!
+        </h1>
+        <p>
+          Perdagangkan Bitcoin, Ethereum, USDT, dan altcoin teratas di bursa
+          aset kripto legendaris.
+        </p>
+        <button class="btn btn-primary">Lihat Market Trend</button>
+      </div>
+      <div class="hero-image">
+        <img src="./assets/hero.png" alt="hero image" />
+      </div>
+    </div>
+    <!-- End Hero -->
+    <!-- Info -->
+    <div class="info">
+      <div class="info-card">
+        <div class="info-list">
+          <img src="./assets/icon1.png" alt="icon 1" />
+          <div class="text-header">Bitcoin / BTC</div>
+          <h4>$61,953.97</h4>
+          <div class="text-desc">+0.67%</div>
+        </div>
+        <div class="info-list">
+          <img src="./assets/icon2.png" alt="icon 1" />
+          <div class="text-header">Ethereum / ETH</div>
+          <h4>$61,953.97</h4>
+          <div class="text-desc">+0.67%</div>
+        </div>
+        <div class="info-list">
+          <img src="./assets/icon3.png" alt="icon 1" />
+          <div class="text-header">Binance Coin / BNB</div>
+          <h4>$61,953.97</h4>
+          <div class="text-desc">+0.67%</div>
+        </div>
+        <div class="info-list">
+          <img src="./assets/icon4.png" alt="icon 1" />
+          <div class="text-header">Tether / USDT</div>
+          <h4>$61,953.97</h4>
+          <div class="text-desc">+0.67%</div>
+        </div>
+      </div>
+    </div>
+    <!-- End Info -->
+    <!-- Modal -->
+    <div class="modal" id="modalRegister">
+      <div class="modal-content">
+        <div class="modal-close">
+          <span class="icon-close">&times;</span>
+        </div>
+        <h4>Daftar ke Cryptowallet</h4>
+        <div class="modal-desc">
+          Sudah punya akun? <a href="#">Masuk disini</a>
+        </div>
+        <form>
+          <div class="form-input">
+            <label>Email</label>
+            <input type="email" placeholder="Masukkan email" />
+          </div>
+        </form>
+        <form>
+          <div class="form-input">
+            <label>Kata Sandi</label>
+            <input type="password" placeholder="Masukkan kata sandi" />
+          </div>
+        </form>
+        <form>
+          <div class="form-input">
+            <label>Konfirmasi Kata Sandi</label>
+            <input type="password" placeholder="Masukkan kata sandi" />
+          </div>
+          <button class="btn btn-primary btn-block">Daftar</button>
+        </form>
+        <div class="modal-footer">
+          Dengan klik mendaftar, saya menyetujui
+          <a href="#">Syarat dan Ketentuan</a> serta
+          <a href="#">Kebijakan Privasi</a>
+          Cryptowallet.
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
+    <script>
+      var btnRegister = document.getElementById("btnRegister");
+      var modalRegister = document.getElementById("modalRegister");
+      var btnCloseModal = document.getElementsByClassName("icon-close")[0];
+
+      btnRegister.onclick = function () {
+        // console.log("button register clicked !");
+        modalRegister.style.display = "flex";
+      };
+
+      btnCloseModal.onclick = function () {
+        modalRegister.style.display = "none";
+      };
+
+      window.onclick = function () {
+        console.log("windows clicked!");
+        if (event.target == modalRegister) {
+          modalRegister.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
